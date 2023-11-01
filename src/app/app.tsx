@@ -3,11 +3,11 @@ import styles from './app.module.css';
 
 import { PrimaryNavigation } from "@/components/primary-navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { faker } from '@faker-js/faker';
+import useStudents from "@/hooks/useStudents";
 
 export function App() {
-  const randomName = faker.person.fullName();
-  console.log(randomName);
+  const students = useStudents(25);
+  console.log(students);
   return (
     <div>
       <PrimaryNavigation/>
