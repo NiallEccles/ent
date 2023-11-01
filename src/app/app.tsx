@@ -3,11 +3,6 @@ import styles from './app.module.css';
 
 import { PrimaryNavigation } from "@/components/primary-navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { faker } from '@faker-js/faker';
 
 export function App() {
@@ -19,14 +14,9 @@ export function App() {
       <Tabs defaultValue="presets" className="w-full">
         <TabsList>
           <TabsTrigger value="presets">Presets</TabsTrigger>
-            <Tooltip>
-              <TooltipTrigger>
-
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Coming soon!</p>
-              </TooltipContent>
-            </Tooltip>
+          <TabsTrigger value="custom" disabled={true}>
+            Custom
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="presets">
           <div className="w-full h-full bg-muted rounded-md p-2">hello</div>
