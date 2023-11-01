@@ -1,5 +1,8 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
+import {
+  TooltipProvider,
+} from "@/components/ui/tooltip"
 
 import App from './app/app';
 
@@ -8,6 +11,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <App />
+    <div className="max-w-6xl mx-auto mt-5 px-5">
+      <TooltipProvider>
+        <App />
+      </TooltipProvider>
+    </div>
   </StrictMode>
 );
