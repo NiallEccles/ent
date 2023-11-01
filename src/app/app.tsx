@@ -7,9 +7,12 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
+} from "@/components/ui/tooltip";
+import { faker } from '@faker-js/faker';
 
 export function App() {
+  const randomName = faker.person.fullName();
+  console.log(randomName);
   return (
     <div>
       <PrimaryNavigation/>
@@ -18,9 +21,7 @@ export function App() {
           <TabsTrigger value="presets">Presets</TabsTrigger>
             <Tooltip>
               <TooltipTrigger>
-                <TabsTrigger value="custom" disabled={true}>
-                  Custom
-                </TabsTrigger>
+
               </TooltipTrigger>
               <TooltipContent>
                 <p>Coming soon!</p>
