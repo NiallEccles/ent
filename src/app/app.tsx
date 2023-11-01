@@ -28,7 +28,7 @@ export function App() {
             </Tooltip>
         </TabsList>
         <TabsContent value="presets">
-          <div className="w-full h-full bg-muted rounded p-2">hello</div>
+          <div className="w-full h-full bg-muted rounded-md p-2">hello</div>
         </TabsContent>
         <TabsContent value="custom">Change your password here.</TabsContent>
       </Tabs>
