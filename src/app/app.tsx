@@ -13,7 +13,7 @@ export function App() {
   return (
     <div>
       <PrimaryNavigation/>
-      <Tabs defaultValue="presets" className="w-[400px]">
+      <Tabs defaultValue="presets" className="w-full">
         <TabsList>
           <TabsTrigger value="presets">Presets</TabsTrigger>
             <Tooltip>
@@ -27,7 +27,9 @@ export function App() {
               </TooltipContent>
             </Tooltip>
         </TabsList>
-        <TabsContent value="presets">Make changes to your account here.</TabsContent>
+        <TabsContent value="presets">
+          <div className="w-full h-full bg-muted rounded p-2">hello</div>
+        </TabsContent>
         <TabsContent value="custom">Change your password here.</TabsContent>
       </Tabs>
     </div>
