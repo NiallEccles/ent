@@ -1,6 +1,11 @@
 import { faker } from '@faker-js/faker';
 
 const useStudents = (amount: number) => {
+  // const dataTypes = [
+  //   { id: 'int' },
+  //   { firstName: 'varchar(255)' },
+  //   { lastName: 'varchar(255)' },
+  // ]
   const students: {[key: string]: string}[] = [];
 
   for (let i = 0; i < amount; i++) {
@@ -11,7 +16,7 @@ const useStudents = (amount: number) => {
     })
   }
 
-  return students;
+  return [students];
 };
 
 export default useStudents;
